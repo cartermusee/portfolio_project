@@ -1,0 +1,125 @@
+{% extends 'base.html'%}
+{% block body%}
+
+<div class="home container">
+    <div class="row justify-content-md-center">
+        <div class=" col-md-4 m-auto">
+            <h2>We have what you need <br> from <span class="element  text-primary border-bottom border-danger"></span> <br>welcome <span class="element2">........</span></h2>
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat perspiciatis sapiente aut a veritatis harum, nam inventore aspernatur accusamus quam aliquid, obcaecati dolor ducimus cumque pariatur ab eligendi autem nobis.
+            </div>
+        </div>
+        
+        <div class="col-md-8">
+            <img class="bg-image img-fluid" src="{{url_for('static', filename='images/bg2.jpeg')}}" alt="img"  height="500">
+        </div>
+    </div>
+    
+</div>
+
+<div class="mt-4">
+    <h4 class="text-center"><span class="featured"></span></h4>
+</div>
+<div id="shop" class="container">
+    
+    <div class="all-product" >
+        {% for shirt in shirts[:3] %}
+        <div class="product"style="width: 12rem;">
+            <a href="{{ url_for('get_a_shirt', shirt_id=shirt.id) }}"><img src="{{url_for('static',filename='images/tshirt1.jpg')}}" class="" alt="...">
+            </a>
+            <h5 class="">{{shirt.shirt_name}}</h5>
+            <p class="">{{shirt.description}}</p>
+            <p class="">{{shirt.price}}$</p>
+            <a href="{{ url_for('cart') }}" class="addToCart btn btn-secondary btn-sm">Add to cart</a>
+        </div>
+        {% endfor %}
+        
+        {% for shorts in short %}
+        <div class="product"style="width: 12rem;">
+            <a href="{{ url_for('get_a_short', short_id=shorts.id) }}">
+                <img src="{{ url_for('static', filename='images/{}'.format(shorts.img)) }}" class="" alt="...">
+            </a>
+            <h5>{{shorts.shorts_name}}</h5>
+            <p>{{shorts.description}}</p>
+            <p>{{shorts.price}}$</p>
+            <a href="#" class="btn btn-secondary btn-sm">Add to cart</a>
+        </div>
+        {% endfor %}
+
+
+        {% for trouser in trousers[:3] %}
+            <div class="product" style="width: 12rem;">
+                <img src="{{url_for('static',filename='images/tshirt1.jpg')}}" class="" alt="...">
+                <h5>{{trouser.trousers_name}}</h5>
+                <p>{{trouser.description}}</p>
+                <p>{{trouser.price}}$</p>
+                <a href="#" class="btn btn-secondary btn-sm">Add to cart</a>
+            </div>
+        {% endfor %} 
+    </div>
+    
+</div>
+
+<div>
+    <div class="offer">
+        <h4>Monthly Offers</h4>
+        <h3>Upto <span>70% off</span>-All Shirts</h3>
+    </div>
+</div>
+
+<div class="container">
+    <h1 class="text-center">New Arrival</h1>
+    <div class="all-new-arrival">
+        <div class="new-arrival">
+            <img src="static/images/upcoming2.jpg" alt="" srcset="">
+            <h4>Summmer shirt</h4>
+            <p>Best Quality from all over town</p>
+            <p>price</p>
+        </div>
+        <div class="new-arrival">
+            <img src="static/images/upcoming2.jpg" alt="" srcset="">
+            <h4>Summmer shirt</h4>
+            <p>Best Quality from all over town</p>
+            <p>price</p>
+        </div>
+        <div class="new-arrival">
+            <img src="static/images/upcoming2.jpg" alt="" srcset="">
+            <h4>Summmer shirt</h4>
+            <p>Best Quality from all over town</p>
+            <p>price</p>
+        </div>
+        <div class="new-arrival">
+            <img src="static/images/upcoming2.jpg" alt="" srcset="">
+            <h4>Summmer shirt</h4>
+            <p>Best Quality from all over town</p>
+            <p>price</p>
+        </div>
+    </div>
+</div>
+
+{% endblock%}
+
+{% block script%}
+<script defer src="{{ url_for('static', filename='scripts/cart.js')}}"></script>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+    var typed = new Typed('.element', {
+        strings: ["Clothes", "Shoes","utensils"],
+        typeSpeed: 100,
+        backSpeed: 100,
+        loop: true
+    });
+    var typed2 = new Typed('.element2', {
+        strings: ["........."],
+        typeSpeed: 100,
+        backSpeed: 100,
+        loop: true
+    });
+    var typed3 = new Typed('.featured', {
+        strings: ["Featured products"],
+        typeSpeed: 100,
+        backSpeed: 100,
+        loop: true
+    });
+</script>
+{% endblock%}

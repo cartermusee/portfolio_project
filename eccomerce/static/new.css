@@ -1,0 +1,92 @@
+.items-content{
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+}
+.items-content .all{
+    margin: auto;
+    width: 12rem;
+    box-shadow: 2px  2px 5px#928080;
+    border-radius: 12px;
+    padding: .3rem;
+}
+.items-content img{
+    width: 100%;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+.items-content .add-sub{
+    display: flex;
+    justify-content: space-between;
+    
+    
+    margin: .2em;
+    flex-direction: column-reverse;
+}
+.items-content .add-sub .minusPlus{
+    display: flex;
+    justify-content: space-evenly;
+}
+.fa-plus{
+    color: green;
+}
+.fa-minus{
+    color: red;
+}
+.navbar-cart{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.uptop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cart{
+    margin-right: .5rem;
+    padding-right: .5rem;
+}
+.cart-items{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+.fa-shopping-cart{
+    position: sticky;
+    top: 0;
+    border: 1px solid yellow;
+    
+    display: block;
+    font-size: 40px;
+    color: rgb(214, 207, 207);
+}
+.cartAmount{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: green;
+    z-index: 1;
+}
+
+/* single shirt */
+.single-shirt{
+    height: 500px;
+    
+}
+.shirt{
+    width: 75%;
+    margin: auto;
+    display: flex;
+    border-radius: 12px;
+    border: 1px solid rgb(97, 85, 85);
+    padding: 5px;
+    box-shadow: 2px 3px 4px;
+}
+.shirt div{
+    margin-left: 2rem;
+}
+
+

@@ -1,0 +1,16 @@
+{% extends 'base.html'%}
+{%block body%}
+
+
+<div id="label"></div>
+<div id="shopping-cart"> </div>
+
+
+
+{% endblock%}
+
+{% block script%}
+
+
+<script src="{{url_for('static',filename='scripts/cart.js')}}"></script>
+{% endblock%}

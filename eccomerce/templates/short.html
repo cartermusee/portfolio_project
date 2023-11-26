@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+{% block body%}
+<div id="shop" class="container">
+    
+    <div class="single-shirt" >
+        
+        <div class="shirt">
+            <img src="{{ url_for('static', filename='images/{}'.format(short_data.img)) }}" class="" alt="...">
+            <div>
+                <h5 class="">{{short_data.short_name}}</h5>
+                <p class="">{{short_data.description}}</p>
+                <p class="">{{short_data.price}}$</p>
+                <a href="{{ url_for('cart') }}" class="addToCart btn btn-secondary btn-sm">Add to cart</a>
+            </div>
+        </div>
+        
+    </div>
+</div>
+{% endblock%}

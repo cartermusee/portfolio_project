@@ -1,0 +1,246 @@
+/* icons */
+/* .bi-house-door{
+    color: rgb(220, 215, 220);
+    margin: 2px;
+    background-color: black;
+} */
+.bi{
+    margin: 2px;
+    color: black
+}
+
+
+
+.content-section {
+    background: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+.login{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    width: 50%;
+}
+.bg-image{
+    width: 100%;
+}
+/* .home{
+    box-sizing: border-box;
+    margin: 0 20px;
+} */
+.home-content{
+    border: 1px solid palevioletred;
+}
+.items{
+    margin-top: 7rem;
+    margin-bottom: 3em;
+    margin-left: 3em;
+    margin-right: 3em;
+}
+.cart{
+    width: 200px;
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+}
+.row{
+    row-gap: .5em;
+}
+.card-co{
+    width: 15em;
+    height: 18em;
+    background-color: aquamarine;
+
+}
+.card-co img{
+    width: 100%;
+}
+/* .item{
+    margin-bottom: 2em;
+    display: flex;
+    justify-content: space-b;
+    align-content: center;
+    gap: 2rem;
+} */
+.item-content{
+    width: 200px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    border-radius: 12px;
+    border: 1px solid gray;
+    margin: 1rem;
+}
+.item-content div{
+    padding: .5rem;
+}
+.item-content .add-sub{
+    display: flex;
+    justify-content: space-between;
+}
+.item img{
+    width: 100%;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;   
+}
+.all-product{
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.product{
+    margin: auto;
+    width: 12rem;
+    box-shadow: 2px  2px 5px#928080;
+    border-radius: 12px;
+    padding: .3rem;
+}
+.product img{
+    width: 100%;
+    height: 10em;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+}
+.product h5{
+    font-size: 18px;
+}
+.product p{
+    font-size: 15px;
+}
+
+.product:hover{
+    transform: translateY(-10px);
+    box-shadow: 3px 3px brown;
+}
+.featured{
+    background-image: linear-gradient(to right, #ff8a00, #e52e71);
+}
+.offer{
+    border: 1px solid yellow;
+    text-align: center;
+    background-image: url("images/offers.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 2rem;
+    color: white;
+    height: 150px;
+}
+.offer span{
+    color: rgb(203, 89, 89);
+    font-size: 30px;
+}
+.all-new-arrival{
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+/* .newa{
+    border-radius: 12px;
+    padding: .5rem;
+} */
+.new-arrival{
+    margin: auto;
+    width: 12rem;
+    box-shadow: 2px  2px 5px#928080;
+    border-radius: 12px;
+    padding: .5rem;
+}
+.new-arrival img{
+    width: 100%;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+}
+
+/* acount.htmlcss */
+.profile-contents{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.profile-contents div{
+    margin-left: 1.5rem;
+}
+.profile-contents img{
+    border-radius: 50%;
+}
+.account{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 75%;
+    margin: auto;
+}
+
+/* cart */
+.fas .fa-shopping-cart{
+    color: red;
+    font-weight: bold;
+}
+.shopping-cart{
+    display: grid;
+    grid-template-columns: repeat(1,320px); 
+    justify-content: center;  
+    gap: 15px;
+    border: 1px solid yellow;
+}
+.cart-item{
+    border: 2px solid gray;
+    display: flex;
+    border-radius: 12px;
+}
+.title-price-x{
+    width: 192px;
+    display: flex;
+    justify-content: space-between;
+}
+.title-price-x h4{
+    font-size: 15px;
+}
+.details h3{
+    font-size: 15px;
+}
+.title-price{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.cart-item-price{
+    background-color: #212;
+    color: white;
+    border-radius: 2px;
+    padding: 3px 6px;
+}
+.buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 1024px){
+    .item{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .all-product{
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 1rem;
+        margin: auto;
+    }
+    .product{
+        margin: auto;
+    }
+    .product-content .btn{
+        align-items: center;
+        padding-left: .5rem;
+        color: yellow;
+    }
+}

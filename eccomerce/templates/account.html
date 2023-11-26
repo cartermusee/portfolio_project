@@ -1,0 +1,69 @@
+{%extends 'base.html'%}
+{% block body%}
+
+
+<div class="container">
+    <div class="account">
+        <div class="profile-contents"> 
+            <div><img class="img-fluid" src="{{ image_file  }}" width="150px" alt="profile picture"></div>
+            <div>
+                <h4>{{current_user.username}}</h4>
+                <h5>{{current_user.email}}</h5>
+            </div>
+        </div>
+        <div class="">
+            <form class="col-12 col-md-8 w-lg-25" action="" method="post" enctype="multipart/form-data">
+                {{ form.hidden_tag() }}
+                <p class="text-uppercase mt-3 mb-1 border-bottom">Account information</p>
+                <div class="mb-3">
+                    {{ form.username.label(class="form-label")}}
+        
+                    {% if form.username.errors %}
+                        {{ form.username(class="form-control is-invalid",placeholder='username') }}
+                        {% for error in form.username.errors%}
+                            <div class="invalid-feedback">
+                                {{error}}
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                        {{ form.username(class="form-control",placeholder='username') }}
+                    {%endif%}
+                </div>
+        
+                <div class="mb-3">
+        
+                    {{ form.email.label(class="form-label")}}
+        
+                    {% if form.email.errors %}
+                        {{ form.email(class="form-control is-invalid",placeholder='email') }}
+                        {% for error in form.email.errors%}
+                            <div class="invalid-feedback">
+                                {{error}}
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                        {{ form.email(class="form-control",placeholder='email') }}
+                    {%endif%}
+                </div>
+                <div class="mb-3">
+                    {{ form.picture.label()}}
+                    {{ form.picture(class="form-control")}}
+                    {% if form.picture.errors%}
+                        {% for error in form.picture.errors %}
+                            <span class="text-danger">{{error}}</span><br>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+                <div class="mb-3">
+                    {{ form.submit(class='form-control btn btn-primary') }}
+                </div>
+        
+        
+            </form>
+        </div>
+    </div>
+    
+</div>
+
+
+{%endblock%}
