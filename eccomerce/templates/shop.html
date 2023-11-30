@@ -1,25 +1,53 @@
 {% extends  'base.html'%}
+
+{% block head%}
+<link rel="stylesheet" href="{{url_for('static',filename='shop.css')}}">
+{%endblock%}
+
+
 {% block body%}
 
-<div class="uptop border-bottom">
-    <h1>SHIRTS SECTION</h1>
-    <div class="navbar navbar-cart">
+   
+    <nav>
+        <div class="container">
+            <strong class="logo">shopp here</strong>
+
+            <button class="cart-btn">
+                <i class="bi bi-cart"></i>
+
+                <small class="cart-qty">0</small>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+        <div class="products"></div>
+        </div>
+    </main>
+
+    <div class="cart-overlay"></div>
+
         <div class="cart">
-            <div class="cart-items">
-                <a href="{{url_for('cart')}}"><i class="fas fa-shopping-cart"></i></a>
-                <div id="cartAmount" class="cartAmount">0</div>
+            <div class="cart-header">
+                <i class="bi bi-arrow-right cart-close"></i>
+                <h2>Your Cart</h2>
+            </div>
+            <div class="cart-body"></div>
+            <div class="cart-footer">
+                <div>
+                    <strong>Total</strong>
+                    <span class="cart-total">0</span>
+                </div>
+                <button class="cart-clear">Clear Cart</button>
+                <button class="checkout">Checkout</button>
             </div>
         </div>
     </div>
-</div>
-<div class="container">
-    
-    <div class="shop items-content mt-2">
-        
-    </div>
 
-</div>
+  
 {% endblock %}
 {% block script%}
     <script src="{{ url_for('static', filename='scripts/app.js')}}"></script>
+    <script defer src="{{ url_for('static', filename='scripts/search.js')}}"></script>
 {% endblock %}

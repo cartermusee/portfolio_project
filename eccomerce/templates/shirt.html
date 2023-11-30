@@ -2,14 +2,14 @@
 {% block body%}
 <div id="shop" class="container">
     
-    <div class="single-shirt" >
+    <div class="single" >
         
-        <div class="shirt">
-            <img class="img-fluid" src="{{url_for('static',filename='images/tshirt1.jpg')}}" class="" alt="...">
+        <div class="shirt-tr-sho">
+            <img src="{{ url_for('static', filename='images/{}'.format(shirt_data.img)) }}" class="" alt="...">
             <div>
                 <h5 class="">{{shirt_data.shirt_name}}</h5>
                 <p class="">{{shirt_data.description}}</p>
-                <p class="">{{shirt_data.price}}$</p>
+                <p class="">Price:{{shirt_data.price}}$</p>
                 <a href="{{ url_for('cart') }}" class="addToCart btn btn-secondary btn-sm">Add to cart</a>
             </div>
         </div>

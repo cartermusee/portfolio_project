@@ -17,15 +17,25 @@
     
 </div>
 
+<section class="about" id="about">
+    <div>
+      <h4>About us:</h4>
+      <p>At MMMSTYLES , we believe that shopping should be an experience, not just a transaction. Our mission is to bring you a seamless and enjoyable online shopping journey, where you can discover a curated selection of high-quality products that cater to your needs and desires.</p>
+    </div>
+</section>
+
+
 <div class="mt-4">
     <h4 class="text-center"><span class="featured"></span></h4>
 </div>
+
 <div id="shop" class="container">
     
-    <div class="all-product" >
+    <div class="home-all-product" >
         {% for shirt in shirts[:3] %}
-        <div class="product"style="width: 12rem;">
-            <a href="{{ url_for('get_a_shirt', shirt_id=shirt.id) }}"><img src="{{url_for('static',filename='images/tshirt1.jpg')}}" class="" alt="...">
+        <div class="home-product"style="width: 12rem;">
+            <a href="{{ url_for('get_a_shirt', shirt_id=shirt.id) }}">
+                <img src="{{ url_for('static', filename='images/{}'.format(shirt.img)) }}" class="" alt="...">
             </a>
             <h5 class="">{{shirt.shirt_name}}</h5>
             <p class="">{{shirt.description}}</p>
@@ -34,25 +44,27 @@
         </div>
         {% endfor %}
         
-        {% for shorts in short %}
-        <div class="product"style="width: 12rem;">
-            <a href="{{ url_for('get_a_short', short_id=shorts.id) }}">
-                <img src="{{ url_for('static', filename='images/{}'.format(shorts.img)) }}" class="" alt="...">
+        {% for short in shorts[:5] %}
+        <div class="home-product"style="width: 12rem;">
+            <a href="{{ url_for('get_a_short', short_id=short.id) }}">
+                <img src="{{ url_for('static', filename='images/{}'.format(short.img)) }}" alt="...">
             </a>
-            <h5>{{shorts.shorts_name}}</h5>
-            <p>{{shorts.description}}</p>
-            <p>{{shorts.price}}$</p>
+            <h5>{{short.shorts_name}}</h5>
+            <p class="des">{{short.description}}</p>
+            <p>Price: {{short.price}}$</p>
             <a href="#" class="btn btn-secondary btn-sm">Add to cart</a>
         </div>
         {% endfor %}
 
 
-        {% for trouser in trousers[:3] %}
-            <div class="product" style="width: 12rem;">
-                <img src="{{url_for('static',filename='images/tshirt1.jpg')}}" class="" alt="...">
+        {% for trouser in trousers %}
+            <div class="home-product" style="width: 12rem;">
+                <a href="{{ url_for('get_a_trouser', trouser_id=trouser.id) }}">
+                    <img src="{{ url_for('static', filename='images/{}'.format(trouser.img)) }}" class="" alt="...">
+                </a>
                 <h5>{{trouser.trousers_name}}</h5>
-                <p>{{trouser.description}}</p>
-                <p>{{trouser.price}}$</p>
+                <p class="des">{{trouser.description}}</p>
+                <p>Price: {{trouser.price}}$</p>
                 <a href="#" class="btn btn-secondary btn-sm">Add to cart</a>
             </div>
         {% endfor %} 

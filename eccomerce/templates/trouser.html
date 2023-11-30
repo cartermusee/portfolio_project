@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+{% block body%}
+<div id="shop" class="container">
+    
+    <div class="single" >
+        
+        <div class="shirt-tr-sho">
+            <img src="{{ url_for('static', filename='images/{}'.format(trouser_data.img)) }}" class="" alt="...">
+            <div>
+                <h5 class="">{{trouser_data.trouser_name}}</h5>
+                <p class="">{{trouser_data.description}}</p>
+                <p class="">{{trouser_data.price}}$</p>
+                <a href="{{ url_for('cart') }}" class="addToCart btn btn-secondary btn-sm">Add to cart</a>
+            </div>
+        </div>
+        
+    </div>
+</div>
+{% endblock%}

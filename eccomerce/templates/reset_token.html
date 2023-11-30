@@ -1,0 +1,50 @@
+{% extends 'base.html'%}
+{% block body%}
+
+<div class="container bg-body-secondary">
+    <form class="m-auto p-1 border col-12 col-md-6 w-lg-25 shadow" action="" method="post">
+        {{ form.hidden_tag() }}
+        <p class="text-uppercase text-center">Reset Password</p>
+        <div class="mb-3">
+            {{ form.password.label(class="form-label")}}
+
+            {% if form.password.errors %}
+                {{ form.password(class="form-control is-invalid",placeholder='password') }}
+                {% for error in form.password.errors%}
+                    <div class="invalid-feedback">
+                    {{error}}
+                    </div>
+                {% endfor %}
+            {% else%}
+                {{ form.password(class="form-control",placeholder='password') }}
+            {% endif %}
+            
+
+        </div>
+        
+        <div class="mb-3">
+
+            {{ form.confirm_password.label(class="form-label")}}
+
+            {% if form.confirm_password.errors %}
+                {{ form.confirm_password(class="form-control is-invalid",placeholder='password') }}
+                {% for error in form.password.errors%}
+                    <div class="invalid-feedback">
+                    {{error}}
+                    </div>
+                {% endfor %}
+            {% else%}
+                {{ form.confirm_password(class="form-control",placeholder='password') }}
+            {% endif %}
+        </div>
+        
+        <div class="mb-3">
+            {{ form.submit(class='form-control btn btn-primary') }}
+        </div>
+
+
+    </form>
+    
+</div>
+
+{% endblock%}

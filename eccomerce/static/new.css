@@ -72,21 +72,26 @@
 }
 
 /* single shirt */
-.single-shirt{
+.single{
     height: 500px;
-    
 }
-.shirt{
+.shirt-tr-sho{
     width: 75%;
     margin: auto;
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     border-radius: 12px;
     border: 1px solid rgb(97, 85, 85);
-    padding: 5px;
+    padding: 10px;
     box-shadow: 2px 3px 4px;
 }
-.shirt div{
+/* .shirt-tr-sho div{
     margin-left: 2rem;
+} */
+
+.shirt-tr-sho img{
+    width: 30%;
 }
 
 
