@@ -1,3 +1,21 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: sans-serif;
+}
+.lg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #212;
+    width: 100px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #212;
+    color: #e5dfdf;
+}
+
+
 /* icons */
 /* .bi-house-door{
     color: rgb(220, 215, 220);
@@ -8,8 +26,28 @@
     margin: 2px;
     color: black
 }
-
-
+.app-parent{
+    margin-top: 2rem;
+}
+.app{
+    margin: auto;
+    padding: 2rem;
+    border: 1px solid #212;
+    width: 30%;
+    border-radius: 12px;
+    box-shadow: 2px 3px 4px ;
+    background-color: #492e38;
+}
+.app img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+.card{
+    border: none;
+    
+}
 
 .content-section {
     background: #ffffff;
@@ -121,23 +159,68 @@
 
 .home-product:hover{
     transform: translateY(-10px);
-    box-shadow: 3px 3px brown;
 }
 .featured{
-    background-image: linear-gradient(to right, #ff8a00, #e52e71);
+    background-image: linear-gradient(to right, #a98e74, #492e38);
+    color: rgb(213, 207, 219);
 }
-.offer{
+
+.about-content{
+    color: rgb(83, 32, 83);
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    height: 250px;
     text-align: center;
+}
+.offers{
     background-image: url("images/offers.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
-    margin-bottom: 2rem;
+    
     color: white;
-    height: 150px;
+    height: 200px;
+    border: 1px solid black;
+    position: relative;
+
+}
+.offer{
+    text-align: center;
+    margin: 2rem;
 }
 .offer span{
     color: rgb(203, 89, 89);
     font-size: 30px;
+}
+.circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    border: 1px solid rgb(137, 137, 133);
+    color: rgb(209, 89, 129);
+    position: absolute;
+    background-color: white;
+}
+.circle p{
+    font-size: 10px;
+    text-align: center;
+}
+.updates{
+    margin-top: 3rem;
+    background: rgb(180, 175, 175);
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    height: 200px;
+    color: rgb(29, 28, 28);
+}
+.updates span{
+    color: gold;
 }
 .all-new-arrival{
     margin-bottom: 2rem;
@@ -228,10 +311,11 @@
     justify-content: space-around;
 }
 .footer{
-    background-color: rgb(191, 186, 186);
+    background-color: #e5dfdf;
     color: rgb(115, 108, 108);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 10px;
 }
 .about{
     margin-top: 5rem;

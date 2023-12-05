@@ -65,10 +65,9 @@ def shop():
     
     return render_template('shop.html',shirts=shirts,shorts=shorts,trousers=trousers)
 
-@app.route('/cart')
-def cart():
-    short = Shorts.query.all()
-    return render_template('cart.html',short=short)
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
 # @app.route('/add-items', methods=["POST"])
 # def additem():

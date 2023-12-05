@@ -60,7 +60,18 @@ nav > .container {
   text-transform: uppercase;
   color: black;
 }
-
+.logo::after{
+  content: "";
+}
+.shop-here{
+  height: 100px;
+  background: #4a646c;
+  padding: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;margin-top: 0;
+}
 .cart-btn {
   padding: 3px 8px;
   background: transparent;

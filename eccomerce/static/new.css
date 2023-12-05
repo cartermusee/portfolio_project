@@ -93,5 +93,30 @@
 .shirt-tr-sho img{
     width: 30%;
 }
-
-
+.collapse .navbar-nav li{
+    display: inline-block;
+    margin: 10px;
+}
+.collapse .top{
+    position: relative;
+    padding: 5px;
+}
+.top::after{
+    content: '';
+    height: 3px;
+    width:0;
+    background:  rgb(218, 39, 98);;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    transition: .5s;
+}
+.top:hover::after{
+    width: 100%;
+}
+.navbar-brand:hover{
+    color: palevioletred;
+}
+.card-header{
+    position: relative;
+}
