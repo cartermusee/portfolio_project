@@ -35,9 +35,9 @@ const setupListeners = () => {
 
 const initStore = () => {
   loadCart();
-  loadProducts("http://127.0.0.1:5000/shirts")
-    .then(() => loadProducts("http://127.0.0.1:5000/shorts"))
-    .then(() => loadProducts("http://127.0.0.1:5000/trousers"))
+  loadProducts("http://143.198.231.39//shirts")
+    .then(() => loadProducts("http://143.198.231.39//shorts"))
+    .then(() => loadProducts("http://143.198.231.39//trousers"))
     
     .then(renderProducts)
     .finally(renderCart);
