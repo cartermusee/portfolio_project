@@ -253,3 +253,4 @@ Number.prototype.format = function () {
 //* initialize
 
 setupListeners();
+
