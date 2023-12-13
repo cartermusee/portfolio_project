@@ -30,17 +30,22 @@
     margin-top: 2rem;
 }
 .app{
+    display: flex;
     margin: auto;
-    padding: 2rem;
+    padding: .5rem;
     border: 1px solid #212;
-    width: 30%;
+    width: 50%;
     border-radius: 12px;
     box-shadow: 2px 3px 4px ;
     background-color: #492e38;
 }
+.text-center{
+    color: palevioletred;
+    margin-bottom: 1rem;
+}
 .app img{
     width: 100%;
-    height: 400px;
+    height: 300px;
     object-fit: cover;
     border-radius: 12px;
 }
@@ -315,7 +320,15 @@
     color: rgb(115, 108, 108);
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    padding: 5px;
+    gap: 5px;
+}
+footer .div1{
+    border-right: 1px solid #212;
+}
+i{
+    color: palevioletred;
+    margin-right: 2px;
 }
 .about{
     margin-top: 5rem;
@@ -324,6 +337,14 @@
     padding: 15px;
     
 }
+.about-page{
+    flex-wrap: wrap;
+    display: flex;
+    gap: 5px;
+    padding:10px;
+    margin-top: 2rem;
+}
+
 
 @media screen and (max-width: 1024px){
     .item{

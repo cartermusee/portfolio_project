@@ -1,3 +1,5 @@
+# module for database
+
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 from eccomerce import db,app
 from flask_login import UserMixin
@@ -55,3 +57,9 @@ class Shirts(db.Model,UserMixin):
 
 class Order(db.Model,UserMixin):
     id = db.Column(db.Integer, primary_key=True)
+
+
+
+
+
+

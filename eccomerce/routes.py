@@ -1,3 +1,5 @@
+# module to all routes
+
 from eccomerce import app,db,bcrypt
 from flask import jsonify,render_template,url_for, flash,redirect,request
 from eccomerce.forms import LoginForm, RegistrationForm,UpdateAccountDetailsForm,RequestResetForm,ResetPassword
@@ -8,7 +10,7 @@ import os
 from eccomerce import mail
 from flask_mail import Message
 
-
+# roue to home
 @app.route('/')
 @app.route("/home")
 def home():
@@ -72,7 +74,7 @@ def about():
 # @app.route('/add-items', methods=["POST"])
 # def additem():
 #     return request.form['select_items']
-
+# function to save picture
 def save_picture(form_profile):
     random_hex = secrets.token_hex(8)
     _, f_ext = os.path.splitext(form_profile.filename)
@@ -170,7 +172,7 @@ def get_a_shirt(shirt_id):
         }
     return render_template('shirt.html',shirt_data=shirt_data) 
 
-
+# Single item api
 @app.route('/shorts',methods=['GET'])
 def get_all_shorts():
     shorts = Shorts.query.all()

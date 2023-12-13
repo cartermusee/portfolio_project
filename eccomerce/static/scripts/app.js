@@ -13,6 +13,7 @@ const selectors = {
   cartClear: document.querySelector(".cart-clear"),
   cartBody: document.querySelector(".cart-body"),
   cartTotal: document.querySelector(".cart-total"),
+  cartcheckout: document.querySelector(".checkout"),
 };
 
 //* event listeners
@@ -29,6 +30,7 @@ const setupListeners = () => {
   selectors.cartClose.addEventListener("click", hideCart);
   selectors.cartBody.addEventListener("click", updateCart);
   selectors.cartClear.addEventListener("click", clearCart);
+  selectors.cartcheckout.addEventListener("click", checkout);
 };
 
 //* event handlers
@@ -249,6 +251,50 @@ Number.prototype.format = function () {
     currency: "USD",
   });
 };
+
+const checkout = ()=>{
+  // URL for the POST request
+  const url = 'Access-Control-Allow-Origin https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
+
+  // Data 
+  const data = {
+    "BusinessShortCode": 174379,
+    "Password": "x",
+    "Timestamp": "20231208230947",
+    "TransactionType": "CustomerPayBillOnline",
+    "Amount": 1,
+    "PartyA": 254726114885,
+    "PartyB": 174379,
+    "PhoneNumber": 254726114885,
+    "CallBackURL": "http://127.0.0.1:5000",
+    "AccountReference": "CompanyXLTD",
+    "TransactionDesc": "Payment of X" 
+  };
+
+  // Configuration for the fetch request
+  const requestOptions = {
+    method: 'POST',
+    headers: {
+      'Key': 'Authorization', 
+      'Value': 'Basic NHdDVEtHM3VIaVFrakhJa1JsZEFadkpEUTFLSjd1cVQ6OE1WUzVoYUlBa2dOejlvRw==',
+
+    },
+    body: JSON.stringify(data) 
+  };
+
+
+  fetch(url, requestOptions)
+  .then(response => {
+    console.log(response);
+    return response.json();
+  })
+  .then(data => {
+    console.log('Response data:', data);
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+}
 
 //* initialize
 
