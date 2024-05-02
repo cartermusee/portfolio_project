@@ -266,7 +266,7 @@ const checkout = ()=>{
     "PartyA": 254726114885,
     "PartyB": 174379,
     "PhoneNumber": 254726114885,
-    "CallBackURL": "http://127.0.0.1:5000",
+    "CallBackURL": "https://cmec.macilah.tech",
     "AccountReference": "CompanyXLTD",
     "TransactionDesc": "Payment of X" 
   };
