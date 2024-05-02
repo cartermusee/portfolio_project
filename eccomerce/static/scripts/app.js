@@ -37,9 +37,9 @@ const setupListeners = () => {
 
 const initStore = () => {
   loadCart();
-  loadProducts("http://143.198.231.39//shirts")
-    .then(() => loadProducts("http://143.198.231.39//shorts"))
-    .then(() => loadProducts("http://143.198.231.39//trousers"))
+  loadProducts("https://cmec.macilah.tech/shirts")
+    .then(() => loadProducts("https://cmec.macilah.tech/shorts"))
+    .then(() => loadProducts("https://cmec.macilah.tech/trousers"))
     
     .then(renderProducts)
     .finally(renderCart);
